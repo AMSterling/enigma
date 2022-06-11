@@ -1,5 +1,6 @@
 require 'Date'
 require 'pry'
+
 class Enigma
   attr_reader :message, :key, :date
 

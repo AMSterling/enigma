@@ -1,0 +1,90 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/sterling/turing/1mod/projects/enigma/spec/enigma_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/sterling/turing/1mod/projects/enigma/lib/enigma.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          4,
+          4,
+          4,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/sterling/turing/1mod/projects/enigma/lib/offset.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/sterling/turing/1mod/projects/enigma/spec/offset_spec.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null
+        ]
+      }
+    },
+    "timestamp": 1654970773
+  }
+}
