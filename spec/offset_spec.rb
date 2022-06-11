@@ -32,5 +32,6 @@ RSpec.describe Offset do
     date = Offset.new('040895')
 
     expect(date.last_4_of_date_squared).to eq([1, 0, 2, 5])
+    expect(date.last_4_of_date_squared.count).to eq(4)
   end
 end
