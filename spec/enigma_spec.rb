@@ -1,5 +1,4 @@
-require 'spec_helper'
-require './lib/enigma'
+require_relative 'spec_helper'
 
 RSpec.describe Enigma do
   it 'exists' do
