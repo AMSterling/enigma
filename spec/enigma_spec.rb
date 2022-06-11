@@ -1,4 +1,7 @@
 require_relative 'spec_helper'
+require 'Date'
+require './lib/enigma'
+require './lib/offset'
 
 RSpec.describe Enigma do
   it 'exists' do
