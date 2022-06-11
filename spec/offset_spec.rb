@@ -1,5 +1,4 @@
-require './lib/offset'
-require 'spec_helper'
+require '.spec/spec_helper'
 
 RSpec.describe Offset do
   it 'exists' do
