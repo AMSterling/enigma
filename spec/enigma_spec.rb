@@ -21,7 +21,7 @@ RSpec.describe Enigma do
     expect(enigma.message).to eq('message')
   end
 
-  it 'is a random five digit number' do
+  it 'is a random five digit number as a string' do
     # enigma = Enigma.new('message', '82648', Date.today)
     enigma = Enigma.new('message', '02715', '040895')
     # message = 'something something darkside..end..'
@@ -30,9 +30,9 @@ RSpec.describe Enigma do
     # expect(enigma.key).to eq('82648')
     expect(enigma.key).to eq('02715')
   end
-  it 'is the current date' do
+  it 'is the current date as a string' do
     # enigma1 = Enigma.new('message', '82648', Date.today)
-    enigma2 = Enigma.new('message', '02715', '040895')
+    enigma = Enigma.new('message', '02715', '040895')
     # message = 'something something darkside..end..'
     message = 'hello world'
 
