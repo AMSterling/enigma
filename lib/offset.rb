@@ -1,4 +1,3 @@
-require 'pry'
 class Offset
   attr_reader :date
 
@@ -11,7 +10,7 @@ class Offset
     @date.to_i ** 2
   end
 
-  def last_4_of_date_squared
+  def last_4
     squared_date.digits[0..3].reverse
   end
 end

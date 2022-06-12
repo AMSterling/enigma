@@ -31,7 +31,7 @@ RSpec.describe Offset do
   it 'takes the last 4 digits of the sqared date as integer' do
     date = Offset.new('040895')
 
-    expect(date.last_4_of_date_squared).to eq([1, 0, 2, 5])
-    expect(date.last_4_of_date_squared.count).to eq(4)
+    expect(date.last_4).to eq([1, 0, 2, 5])
+    expect(date.last_4.length).to eq(4)
   end
 end
