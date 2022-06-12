@@ -7,6 +7,7 @@ RSpec.describe Key do
 
     expect(key).to be_a Key
     expect(key.random_nums).to eq('02715')
+    expect(key.random_nums.length).to eq(5)
   end
 
   it 'extracts the first two characters to return the first integer' do
@@ -31,5 +32,12 @@ RSpec.describe Key do
     key = Key.new('02715')
 
     expect(key.fourth_shift('02715')).to eq(15)
+  end
+
+  it 'can generate a random 5-digit key' do
+    key = Key.new('02715')
+
+    expect(key.key_generator).to be_a String
+    expect(key.key_generator.length).to eq(5)
   end
 end

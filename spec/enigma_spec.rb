@@ -58,6 +58,12 @@ RSpec.describe Enigma do
     expect(enigma.shift_a('o')).to eq(17)
   end
 
+  xit 'applies shift method to each character of the message' do
+    enigma = Enigma.new('hello world', '02715', '040895')
+
+    expect(enigma.shift).to be_a String
+  end
+
   xit 'returns the encryption as a hash' do
     enigma = Enigma.new('hello world', '02715', '040895')
 

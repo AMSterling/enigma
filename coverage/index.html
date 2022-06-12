@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2022-06-11T21:19:57-06:00">2022-06-11T21:19:57-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2022-06-11T22:35:56-06:00">2022-06-11T22:35:56-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,14 +23,14 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="green">
-  97.37%
+  95.97%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.59
+         1.54
        </span>
     </span> hits/line
     )
@@ -43,11 +43,11 @@
   </div>
 
   <div class="t-line-summary">
-    <b>114</b> relevant lines,
-    <span class="green"><b>111</b> lines covered</span> and
-    <span class="red"><b>3</b> lines missed. </span>
+    <b>124</b> relevant lines,
+    <span class="green"><b>119</b> lines covered</span> and
+    <span class="red"><b>5</b> lines missed. </span>
     (<span class="green">
-  97.37%
+  95.97%
 </span>
 )
   </div>
@@ -84,11 +84,11 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#9e38b8e63e63b8ea7e8ab18757bbaf81d8ecbad3" class="src_link" title="lib/key.rb">lib/key.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">23</td>
-            <td class="cell--number">12</td>
-            <td class="cell--number">12</td>
+            <td class="cell--number">27</td>
+            <td class="cell--number">14</td>
+            <td class="cell--number">14</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">2.33</td>
+            <td class="cell--number">2.29</td>
             
           </tr>
         
@@ -105,21 +105,21 @@
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#95dec19c47f1101b277efb9fb46f8738f71d99cc" class="src_link" title="spec/enigma_spec.rb">spec/enigma_spec.rb</a></td>
-            <td class="green strong cell--number t-file__coverage">94.12 %</td>
-            <td class="cell--number">70</td>
-            <td class="cell--number">34</td>
-            <td class="cell--number">32</td>
-            <td class="cell--number">2</td>
-            <td class="cell--number">0.94</td>
+            <td class="yellow strong cell--number t-file__coverage">89.19 %</td>
+            <td class="cell--number">76</td>
+            <td class="cell--number">37</td>
+            <td class="cell--number">33</td>
+            <td class="cell--number">4</td>
+            <td class="cell--number">0.89</td>
             
           </tr>
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#74e44bf1fc417f80bdf3b4723b50728db9c11aba" class="src_link" title="spec/key_spec.rb">spec/key_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">35</td>
-            <td class="cell--number">19</td>
-            <td class="cell--number">19</td>
+            <td class="cell--number">43</td>
+            <td class="cell--number">24</td>
+            <td class="cell--number">24</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -627,8 +627,8 @@
     
 
     <div class="t-line-summary">
-      <b>12</b> relevant lines.
-      <span class="green"><b>12</b> lines covered</span> and
+      <b>14</b> relevant lines.
+      <span class="green"><b>14</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -679,13 +679,13 @@
 
             
 
-            <code class="ruby">  def initialize(random_nums)</code>
+            <code class="ruby">  def initialize(random_nums = key_generator)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="12" data-linenumber="5">
-            <span class="hits">12</span>
+          <li class="covered" data-hits="13" data-linenumber="5">
+            <span class="hits">13</span>
             
 
             
@@ -883,6 +883,50 @@
       
         <div>
           <li class="never" data-hits="" data-linenumber="23">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="24">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def key_generator</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="25">
+            <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">    rand.to_s[2..6]</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="26">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="27">
             
             
 
@@ -1108,8 +1152,8 @@
   <div class="header">
     <h3>spec/enigma_spec.rb</h3>
     <h4>
-      <span class="green">
-  94.12%
+      <span class="yellow">
+  89.19%
 </span>
 
       lines covered
@@ -1118,9 +1162,9 @@
     
 
     <div class="t-line-summary">
-      <b>34</b> relevant lines.
-      <span class="green"><b>32</b> lines covered</span> and
-      <span class="red"><b>2</b> lines missed.</span>
+      <b>37</b> relevant lines.
+      <span class="green"><b>33</b> lines covered</span> and
+      <span class="red"><b>4</b> lines missed.</span>
     </div>
 
     
@@ -1797,7 +1841,7 @@
 
             
 
-            <code class="ruby">  xit &#39;returns the encryption as a hash&#39; do</code>
+            <code class="ruby">  xit &#39;applies shift method to each character of the message&#39; do</code>
           </li>
         </div>
       
@@ -1830,7 +1874,7 @@
 
             
 
-            <code class="ruby">    expect(enigma.encrypt).to eq({</code>
+            <code class="ruby">    expect(enigma.shift).to be_a String</code>
           </li>
         </div>
       
@@ -1841,7 +1885,7 @@
 
             
 
-            <code class="ruby">            encryption: &quot;keder ohulw&quot;,</code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
@@ -1852,29 +1896,29 @@
 
             
 
-            <code class="ruby">            key: &quot;02715&quot;,</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="67">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="67">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">            date: &quot;040895&quot;</code>
+            
+
+            <code class="ruby">  xit &#39;returns the encryption as a hash&#39; do</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="68">
+          <li class="missed" data-hits="0" data-linenumber="68">
             
             
 
             
 
-            <code class="ruby">            })</code>
+            <code class="ruby">    enigma = Enigma.new(&#39;hello world&#39;, &#39;02715&#39;, &#39;040895&#39;)</code>
           </li>
         </div>
       
@@ -1885,12 +1929,78 @@
 
             
 
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="70">
+            
+            
+
+            
+
+            <code class="ruby">    expect(enigma.encrypt).to eq({</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="71">
+            
+            
+
+            
+
+            <code class="ruby">            encryption: &quot;keder ohulw&quot;,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="72">
+            
+            
+
+            
+
+            <code class="ruby">            key: &quot;02715&quot;,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="73">
+            
+            
+
+            
+
+            <code class="ruby">            date: &quot;040895&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="74">
+            
+            
+
+            
+
+            <code class="ruby">            })</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="75">
+            
+            
+
+            
+
             <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="70">
+          <li class="never" data-hits="" data-linenumber="76">
             
             
 
@@ -1919,8 +2029,8 @@
     
 
     <div class="t-line-summary">
-      <b>19</b> relevant lines.
-      <span class="green"><b>19</b> lines covered</span> and
+      <b>24</b> relevant lines.
+      <span class="green"><b>24</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -2031,13 +2141,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="10">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="10">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">  end</code>
+            
+
+            <code class="ruby">    expect(key.random_nums.length).to eq(5)</code>
           </li>
         </div>
       
@@ -2048,18 +2158,18 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="12">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="12">
+            
             
 
             
 
-            <code class="ruby">  it &#39;extracts the first two characters to return the first integer&#39; do</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -2070,12 +2180,23 @@
 
             
 
+            <code class="ruby">  it &#39;extracts the first two characters to return the first integer&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="14">
+            <span class="hits">1</span>
+            
+
+            
+
             <code class="ruby">    key = Key.new(&#39;02715&#39;)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="14">
+          <li class="never" data-hits="" data-linenumber="15">
             
             
 
@@ -2086,7 +2207,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="15">
+          <li class="covered" data-hits="1" data-linenumber="16">
             <span class="hits">1</span>
             
 
@@ -2097,7 +2218,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="16">
+          <li class="never" data-hits="" data-linenumber="17">
             
             
 
@@ -2108,24 +2229,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="17">
+          <li class="never" data-hits="" data-linenumber="18">
             
             
 
             
 
             <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="18">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  it &#39;extracts the second and third characters to return the second integer&#39; do</code>
           </li>
         </div>
       
@@ -2136,12 +2246,23 @@
 
             
 
+            <code class="ruby">  it &#39;extracts the second and third characters to return the second integer&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="20">
+            <span class="hits">1</span>
+            
+
+            
+
             <code class="ruby">    key = Key.new(&#39;02715&#39;)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="20">
+          <li class="never" data-hits="" data-linenumber="21">
             
             
 
@@ -2152,7 +2273,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="21">
+          <li class="covered" data-hits="1" data-linenumber="22">
             <span class="hits">1</span>
             
 
@@ -2163,7 +2284,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="22">
+          <li class="never" data-hits="" data-linenumber="23">
             
             
 
@@ -2174,24 +2295,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="23">
+          <li class="never" data-hits="" data-linenumber="24">
             
             
 
             
 
             <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="24">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  it &#39;extracts the third and fourth to return the third integer&#39; do</code>
           </li>
         </div>
       
@@ -2202,12 +2312,23 @@
 
             
 
+            <code class="ruby">  it &#39;extracts the third and fourth to return the third integer&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="26">
+            <span class="hits">1</span>
+            
+
+            
+
             <code class="ruby">    key = Key.new(&#39;02715&#39;)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="26">
+          <li class="never" data-hits="" data-linenumber="27">
             
             
 
@@ -2218,7 +2339,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="27">
+          <li class="covered" data-hits="1" data-linenumber="28">
             <span class="hits">1</span>
             
 
@@ -2229,7 +2350,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="28">
+          <li class="never" data-hits="" data-linenumber="29">
             
             
 
@@ -2240,24 +2361,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="29">
+          <li class="never" data-hits="" data-linenumber="30">
             
             
 
             
 
             <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="30">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  it &#39;extracts the fourth and fifth characters to return the fourth integer&#39; do</code>
           </li>
         </div>
       
@@ -2268,12 +2378,23 @@
 
             
 
+            <code class="ruby">  it &#39;extracts the fourth and fifth characters to return the fourth integer&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="32">
+            <span class="hits">1</span>
+            
+
+            
+
             <code class="ruby">    key = Key.new(&#39;02715&#39;)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="32">
+          <li class="never" data-hits="" data-linenumber="33">
             
             
 
@@ -2284,7 +2405,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="33">
+          <li class="covered" data-hits="1" data-linenumber="34">
             <span class="hits">1</span>
             
 
@@ -2295,7 +2416,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="34">
+          <li class="never" data-hits="" data-linenumber="35">
             
             
 
@@ -2306,7 +2427,84 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="35">
+          <li class="never" data-hits="" data-linenumber="36">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="37">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  it &#39;can generate a random 5-digit key&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="38">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    key = Key.new(&#39;02715&#39;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="39">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="40">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(key.key_generator).to be_a String</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="41">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(key.key_generator.length).to eq(5)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="42">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="43">
             
             
 
