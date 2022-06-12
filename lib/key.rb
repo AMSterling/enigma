@@ -1,7 +1,7 @@
 class Key
   attr_reader :random_nums
 
-  def initialize(random_nums)
+  def initialize(random_nums = key_generator)
     @random_nums = random_nums
   end
 
@@ -19,5 +19,9 @@ class Key
 
   def fourth_shift(key)
     @random_nums.chars[3..4].join.to_i
+  end
+
+  def key_generator
+    rand.to_s[2..6]
   end
 end
