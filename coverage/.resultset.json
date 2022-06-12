@@ -84,7 +84,9 @@
       "/Users/sterling/turing/1mod/projects/enigma/lib/enigma.rb": {
         "lines": [
           1,
+          1,
           null,
+          1,
           1,
           1,
           null,
@@ -95,7 +97,12 @@
           null,
           7,
           null,
-          null,
+          null
+        ]
+      },
+      "/Users/sterling/turing/1mod/projects/enigma/lib/de_encryptable.rb": {
+        "lines": [
+          1,
           1,
           6,
           null,
@@ -264,6 +271,6 @@
         ]
       }
     },
-    "timestamp": 1655008556
+    "timestamp": 1655010334
   }
 }
