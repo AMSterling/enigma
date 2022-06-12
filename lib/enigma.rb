@@ -1,13 +1,39 @@
 require 'Date'
-require 'pry'
 
 class Enigma
-  attr_reader :message, :key, :date
+  attr_reader :message, :key, :date, :character_set
 
   def initialize(message, key, date)
     @message = message
-    @key = key
-    @date = date
+    @key = Key.new(key)
+    @date = Offset.new(date)
     # @date = Date.today.strftime('%d%m%y')
+    @character_set = ("a".."z").to_a << " "
+  end
+
+  def start_position(char)
+    @character_set.index(char)
+  end
+
+  def shift_a(char)
+    (start_position(char) + @key.first_shift(key) + @date.last_4[0]) % @character_set.count
+  end
+
+  def shift_b(char)
+    (start_position(char) + @key.second_shift(key) + @date.last_4[1]) % @character_set.count
+  end
+
+  def shift_c(char)
+    (start_position(char) + @key.third_shift(key) + @date.last_4[2]) % @character_set.count
+  end
+
+  def shift_d(char)
+    (start_position(char) + @key.fourth_shift(key) + @date.last_4[3]) % @character_set.count
+  end
+
+  def encrypt
+    hash = { :encryption => @message,
+             :key => @key.random_nums,
+             :date => @date.date }
   end
 end
