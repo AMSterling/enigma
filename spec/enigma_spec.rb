@@ -117,5 +117,26 @@ RSpec.describe Enigma do
                   :key => "02715",
                   :date => "040895"
                   })
-    end
+  end
+
+  it 'can encrypt enigma with current date' do
+    enigma = Enigma.new('hello world', '02715')
+
+    expect(enigma.date.date).to eq(Date.today.strftime('%d%m%y'))
+  end
+
+  it 'can encrypt enigma with a randomly generated key' do
+    enigma = Enigma.new('hello world')
+
+    expect(enigma.key).to be_a Key
+    expect(enigma.date.date).to eq(Date.today.strftime('%d%m%y'))
+  end
+
+  it 'can encrypt enigma with messages from txt file' do
+    enigma = Enigma.new
+
+    expect(enigma.message).to eq('hello world')
+    expect(enigma.key).to be_a Key
+    expect(enigma.date.date).to eq(Date.today.strftime('%d%m%y'))
+  end
 end
