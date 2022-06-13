@@ -1,15 +1,14 @@
 require 'Date'
-require_relative 'de_encryptable'
+require_relative 'shiftable'
 
 class Enigma
-  include DeEncryptable
+  include Shiftable
   attr_reader :message, :key, :date, :character_set
 
   def initialize(message, key, date)
     @message = message
     @key = Key.new(key)
     @date = Offset.new(date)
-    # @date = Date.today.strftime('%d%m%y')
     @character_set = ("a".."z").to_a << " "
   end
 
