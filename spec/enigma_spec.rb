@@ -48,7 +48,7 @@ RSpec.describe Enigma do
     expect(enigma.start_position('h')).to eq(7)
   end
 
-  it 'is the A shift' do
+  it 'is the A, B, C or D shift' do
     enigma = Enigma.new('hello world', '02715', '040895')
 
     expect(enigma.shift_a('h')).to eq(10)
@@ -56,21 +56,65 @@ RSpec.describe Enigma do
     expect(enigma.shift_c('l')).to eq(3)
     expect(enigma.shift_d('l')).to eq(4)
     expect(enigma.shift_a('o')).to eq(17)
+    expect(enigma.shift_b(' ')).to eq(26)
+
   end
 
-  xit 'applies shift method to each character of the message' do
-    enigma = Enigma.new('hello world', '02715', '040895')
+  it 'checks if punctuation/spaces are not included in character set' do
+    enigma = Enigma.new('hello world!', '02715', '040895')
 
-    expect(enigma.shift).to be_a String
+    expect(enigma.punctuation(' ')).to be false
+    expect(enigma.punctuation('!')).to be true
   end
 
-  xit 'returns the encryption as a hash' do
+  it 'applies shift method to each character of the message' do
     enigma = Enigma.new('hello world', '02715', '040895')
+
+    expect(enigma.shift('hello world')).to eq('keder ohulw')
+  end
+
+  it 'returns the encryption as a hash' do
+    enigma = Enigma.new('hello world', '02715', '040895')
+
+    enigma.shift('hello world')
 
     expect(enigma.encrypt).to eq({
-            encryption: "keder ohulw",
-            key: "02715",
-            date: "040895"
-            })
+                    :encryption => 'keder ohulw',
+                    :key => "02715",
+                    :date => "040895"
+                    })
   end
+
+  it 'is the A, B, C or D unshift' do
+    enigma = Enigma.new('hello world', '02715', '040895')
+
+    expect(enigma.unshift_a('k')).to eq(7)
+    expect(enigma.unshift_b('e')).to eq(4)
+    expect(enigma.unshift_c('d')).to eq(11)
+    expect(enigma.unshift_d('e')).to eq(11)
+    expect(enigma.unshift_a('r')).to eq(14)
+    expect(enigma.unshift_b(' ')).to eq(26)
+  end
+
+  it 'applies unshift method to each character of the message' do
+    enigma = Enigma.new('hello world', '02715', '040895')
+
+    enigma.shift('hello world')
+    enigma.unshift('keder ohulw')
+
+    expect(enigma.unshift('keder ohulw')).to eq('hello world')
+  end
+
+  it 'is the decrypted hash' do
+    enigma = Enigma.new('hello world', '02715', '040895')
+
+    enigma.shift('hello world')
+    enigma.unshift('keder ohulw')
+
+    expect(enigma.decrypt).to eq({
+                  :decryption => 'hello world',
+                  :key => "02715",
+                  :date => "040895"
+                  })
+    end
 end
