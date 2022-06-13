@@ -1,9 +1,8 @@
 class Offset
   attr_reader :date
 
-  def initialize(date = Date.today.strftime(‘%d%m%y’))
+  def initialize(date = Date.today.strftime('%d%m%y'))
     @date = date
-    # @converted_date = date.to_i
   end
 
   def squared_date

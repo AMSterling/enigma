@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2022-06-12T19:11:41-06:00">2022-06-12T19:11:41-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2022-06-13T16:19:34-06:00">2022-06-13T16:19:34-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,14 +23,14 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="green">
-  98.99%
+  99.02%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         9.22
+         9.06
        </span>
     </span> hits/line
     )
@@ -43,11 +43,11 @@
   </div>
 
   <div class="t-line-summary">
-    <b>199</b> relevant lines,
-    <span class="green"><b>197</b> lines covered</span> and
+    <b>205</b> relevant lines,
+    <span class="green"><b>203</b> lines covered</span> and
     <span class="red"><b>2</b> lines missed. </span>
     (<span class="green">
-  98.99%
+  99.02%
 </span>
 )
   </div>
@@ -73,33 +73,33 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#6384481dcdc70a9c354a29357c867cfbbfae1115" class="src_link" title="lib/enigma.rb">lib/enigma.rb</a></td>
             <td class="green strong cell--number t-file__coverage">95.24 %</td>
-            <td class="cell--number">70</td>
+            <td class="cell--number">72</td>
             <td class="cell--number">42</td>
             <td class="cell--number">40</td>
             <td class="cell--number">2</td>
-            <td class="cell--number">23.50</td>
+            <td class="cell--number">23.79</td>
             
           </tr>
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#9e38b8e63e63b8ea7e8ab18757bbaf81d8ecbad3" class="src_link" title="lib/key.rb">lib/key.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">27</td>
-            <td class="cell--number">14</td>
-            <td class="cell--number">14</td>
+            <td class="cell--number">23</td>
+            <td class="cell--number">12</td>
+            <td class="cell--number">12</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">11.79</td>
+            <td class="cell--number">13.67</td>
             
           </tr>
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#2f11f0a5ee3e1c9291ac938e24e184f82f869f24" class="src_link" title="lib/offset.rb">lib/offset.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">16</td>
+            <td class="cell--number">15</td>
             <td class="cell--number">8</td>
             <td class="cell--number">8</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">36.50</td>
+            <td class="cell--number">36.88</td>
             
           </tr>
         
@@ -117,9 +117,9 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#95dec19c47f1101b277efb9fb46f8738f71d99cc" class="src_link" title="spec/enigma_spec.rb">spec/enigma_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">121</td>
-            <td class="cell--number">71</td>
-            <td class="cell--number">71</td>
+            <td class="cell--number">142</td>
+            <td class="cell--number">83</td>
+            <td class="cell--number">83</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -129,8 +129,8 @@
             <td class="strong t-file__name"><a href="#74e44bf1fc417f80bdf3b4723b50728db9c11aba" class="src_link" title="spec/key_spec.rb">spec/key_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
             <td class="cell--number">43</td>
-            <td class="cell--number">24</td>
-            <td class="cell--number">24</td>
+            <td class="cell--number">20</td>
+            <td class="cell--number">20</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -274,13 +274,35 @@
 
             
 
-            <code class="ruby">  def initialize(message, key, date)</code>
+            <code class="ruby">  def initialize(message = File.open(&#39;./lib/message.txt&#39;, &#39;r&#39;).read.downcase.chomp,</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="13" data-linenumber="9">
-            <span class="hits">13</span>
+          <li class="never" data-hits="" data-linenumber="9">
+            
+            
+
+            
+
+            <code class="ruby">                  key = rand.to_s[2..6],</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="10">
+            
+            
+
+            
+
+            <code class="ruby">                  date = Date.today.strftime(&#39;%d%m%y&#39;))</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="16" data-linenumber="11">
+            <span class="hits">16</span>
             
 
             
@@ -290,8 +312,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="13" data-linenumber="10">
-            <span class="hits">13</span>
+          <li class="covered" data-hits="16" data-linenumber="12">
+            <span class="hits">16</span>
             
 
             
@@ -301,8 +323,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="13" data-linenumber="11">
-            <span class="hits">13</span>
+          <li class="covered" data-hits="16" data-linenumber="13">
+            <span class="hits">16</span>
             
 
             
@@ -312,8 +334,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="13" data-linenumber="12">
-            <span class="hits">13</span>
+          <li class="covered" data-hits="16" data-linenumber="14">
+            <span class="hits">16</span>
             
 
             
@@ -323,7 +345,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="13">
+          <li class="never" data-hits="" data-linenumber="15">
             
             
 
@@ -334,7 +356,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="14">
+          <li class="never" data-hits="" data-linenumber="16">
             
             
 
@@ -345,7 +367,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="15">
+          <li class="covered" data-hits="1" data-linenumber="17">
             <span class="hits">1</span>
             
 
@@ -356,7 +378,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="112" data-linenumber="16">
+          <li class="covered" data-hits="112" data-linenumber="18">
             <span class="hits">112</span>
             
 
@@ -367,7 +389,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="17">
+          <li class="never" data-hits="" data-linenumber="19">
             
             
 
@@ -378,7 +400,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="18">
+          <li class="never" data-hits="" data-linenumber="20">
             
             
 
@@ -389,7 +411,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="19">
+          <li class="covered" data-hits="1" data-linenumber="21">
             <span class="hits">1</span>
             
 
@@ -400,7 +422,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="6" data-linenumber="20">
+          <li class="covered" data-hits="6" data-linenumber="22">
             <span class="hits">6</span>
             
 
@@ -411,7 +433,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="6" data-linenumber="21">
+          <li class="covered" data-hits="6" data-linenumber="23">
             <span class="hits">6</span>
             
 
@@ -422,7 +444,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="6" data-linenumber="22">
+          <li class="covered" data-hits="6" data-linenumber="24">
             <span class="hits">6</span>
             
 
@@ -433,7 +455,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="66" data-linenumber="23">
+          <li class="covered" data-hits="66" data-linenumber="25">
             <span class="hits">66</span>
             
 
@@ -444,7 +466,7 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="24">
+          <li class="missed" data-hits="0" data-linenumber="26">
             
             
 
@@ -455,35 +477,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="25">
+          <li class="never" data-hits="" data-linenumber="27">
             
             
 
             
 
             <code class="ruby">      else</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="66" data-linenumber="26">
-            <span class="hits">66</span>
-            
-
-            
-
-            <code class="ruby">        position += 1; position = 1 if position &gt; 4</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="66" data-linenumber="27">
-            <span class="hits">66</span>
-            
-
-            
-
-            <code class="ruby">        index = shift_a(char) if position == 1</code>
           </li>
         </div>
       
@@ -494,7 +494,7 @@
 
             
 
-            <code class="ruby">        index = shift_b(char) if position == 2</code>
+            <code class="ruby">        position += 1; position = 1 if position &gt; 4</code>
           </li>
         </div>
       
@@ -505,7 +505,7 @@
 
             
 
-            <code class="ruby">        index = shift_c(char) if position == 3</code>
+            <code class="ruby">        index = shift_a(char) if position == 1</code>
           </li>
         </div>
       
@@ -516,7 +516,7 @@
 
             
 
-            <code class="ruby">        index = shift_d(char) if position == 4</code>
+            <code class="ruby">        index = shift_b(char) if position == 2</code>
           </li>
         </div>
       
@@ -527,40 +527,40 @@
 
             
 
+            <code class="ruby">        index = shift_c(char) if position == 3</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="66" data-linenumber="32">
+            <span class="hits">66</span>
+            
+
+            
+
+            <code class="ruby">        index = shift_d(char) if position == 4</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="66" data-linenumber="33">
+            <span class="hits">66</span>
+            
+
+            
+
             <code class="ruby">        string += @character_set[index]</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="32">
+          <li class="never" data-hits="" data-linenumber="34">
             
             
 
             
 
             <code class="ruby">      end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="33">
-            
-            
-
-            
-
-            <code class="ruby">    end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="6" data-linenumber="34">
-            <span class="hits">6</span>
-            
-
-            
-
-            <code class="ruby">     string</code>
           </li>
         </div>
       
@@ -571,29 +571,29 @@
 
             
 
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="6" data-linenumber="36">
+            <span class="hits">6</span>
+            
+
+            
+
+            <code class="ruby">     string</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="37">
+            
+            
+
+            
+
             <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="36">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="37">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  def encrypt</code>
           </li>
         </div>
       
@@ -604,7 +604,7 @@
 
             
 
-            <code class="ruby">    encrypt_hash = {</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -615,7 +615,7 @@
 
             
 
-            <code class="ruby">            :encryption =&gt; shift(message),</code>
+            <code class="ruby">  def encrypt</code>
           </li>
         </div>
       
@@ -626,18 +626,18 @@
 
             
 
-            <code class="ruby">            :key =&gt; @key.random_nums,</code>
+            <code class="ruby">    encrypt_hash = {</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="41">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="41">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">            :date =&gt; @date.date</code>
+            
+
+            <code class="ruby">            :encryption =&gt; shift(message),</code>
           </li>
         </div>
       
@@ -648,7 +648,7 @@
 
             
 
-            <code class="ruby">          }</code>
+            <code class="ruby">            :key =&gt; @key.random_nums,</code>
           </li>
         </div>
       
@@ -659,7 +659,7 @@
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby">            :date =&gt; @date.date</code>
           </li>
         </div>
       
@@ -670,12 +670,34 @@
 
             
 
+            <code class="ruby">          }</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="45">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="46">
+            
+            
+
+            
+
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="45">
+          <li class="covered" data-hits="1" data-linenumber="47">
             <span class="hits">1</span>
             
 
@@ -686,7 +708,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="4" data-linenumber="46">
+          <li class="covered" data-hits="4" data-linenumber="48">
             <span class="hits">4</span>
             
 
@@ -697,7 +719,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="4" data-linenumber="47">
+          <li class="covered" data-hits="4" data-linenumber="49">
             <span class="hits">4</span>
             
 
@@ -708,7 +730,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="4" data-linenumber="48">
+          <li class="covered" data-hits="4" data-linenumber="50">
             <span class="hits">4</span>
             
 
@@ -719,7 +741,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="44" data-linenumber="49">
+          <li class="covered" data-hits="44" data-linenumber="51">
             <span class="hits">44</span>
             
 
@@ -730,7 +752,7 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="50">
+          <li class="missed" data-hits="0" data-linenumber="52">
             
             
 
@@ -741,7 +763,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="51">
+          <li class="never" data-hits="" data-linenumber="53">
             
             
 
@@ -752,7 +774,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="44" data-linenumber="52">
+          <li class="covered" data-hits="44" data-linenumber="54">
             <span class="hits">44</span>
             
 
@@ -763,7 +785,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="44" data-linenumber="53">
+          <li class="covered" data-hits="44" data-linenumber="55">
             <span class="hits">44</span>
             
 
@@ -774,7 +796,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="44" data-linenumber="54">
+          <li class="covered" data-hits="44" data-linenumber="56">
             <span class="hits">44</span>
             
 
@@ -785,7 +807,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="44" data-linenumber="55">
+          <li class="covered" data-hits="44" data-linenumber="57">
             <span class="hits">44</span>
             
 
@@ -796,7 +818,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="44" data-linenumber="56">
+          <li class="covered" data-hits="44" data-linenumber="58">
             <span class="hits">44</span>
             
 
@@ -807,7 +829,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="44" data-linenumber="57">
+          <li class="covered" data-hits="44" data-linenumber="59">
             <span class="hits">44</span>
             
 
@@ -818,7 +840,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="58">
+          <li class="never" data-hits="" data-linenumber="60">
             
             
 
@@ -829,7 +851,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="59">
+          <li class="never" data-hits="" data-linenumber="61">
             
             
 
@@ -840,7 +862,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="4" data-linenumber="60">
+          <li class="covered" data-hits="4" data-linenumber="62">
             <span class="hits">4</span>
             
 
@@ -851,35 +873,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="61">
+          <li class="never" data-hits="" data-linenumber="63">
             
             
 
             
 
             <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="62">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="63">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  def decrypt</code>
           </li>
         </div>
       
@@ -890,7 +890,7 @@
 
             
 
-            <code class="ruby">    decrypt_hash = {</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -901,7 +901,7 @@
 
             
 
-            <code class="ruby">            :decryption =&gt; unshift(shift(message)),</code>
+            <code class="ruby">  def decrypt</code>
           </li>
         </div>
       
@@ -912,18 +912,18 @@
 
             
 
-            <code class="ruby">            :key =&gt; @key.random_nums,</code>
+            <code class="ruby">    decrypt_hash = {</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="67">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="67">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">            :date =&gt; @date.date</code>
+            
+
+            <code class="ruby">            :decryption =&gt; unshift(shift(message)),</code>
           </li>
         </div>
       
@@ -934,7 +934,7 @@
 
             
 
-            <code class="ruby">          }</code>
+            <code class="ruby">            :key =&gt; @key.random_nums,</code>
           </li>
         </div>
       
@@ -945,12 +945,34 @@
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby">            :date =&gt; @date.date</code>
           </li>
         </div>
       
         <div>
           <li class="never" data-hits="" data-linenumber="70">
+            
+            
+
+            
+
+            <code class="ruby">          }</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="71">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="72">
             
             
 
@@ -979,8 +1001,8 @@
     
 
     <div class="t-line-summary">
-      <b>14</b> relevant lines.
-      <span class="green"><b>14</b> lines covered</span> and
+      <b>12</b> relevant lines.
+      <span class="green"><b>12</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -1031,13 +1053,13 @@
 
             
 
-            <code class="ruby">  def initialize(random_nums = key_generator)</code>
+            <code class="ruby">  def initialize(random_nums)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="19" data-linenumber="5">
-            <span class="hits">19</span>
+          <li class="covered" data-hits="21" data-linenumber="5">
+            <span class="hits">21</span>
             
 
             
@@ -1240,50 +1262,6 @@
 
             
 
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="24">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  def key_generator</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="2" data-linenumber="25">
-            <span class="hits">2</span>
-            
-
-            
-
-            <code class="ruby">    rand.to_s[2..6]</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="26">
-            
-            
-
-            
-
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="27">
-            
-            
-
-            
-
             <code class="ruby">end</code>
           </li>
         </div>
@@ -1359,13 +1337,13 @@
 
             
 
-            <code class="ruby">  def initialize(date = Date.today.strftime(‘%d%m%y’))</code>
+            <code class="ruby">  def initialize(date = Date.today.strftime(&#39;%d%m%y&#39;))</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="18" data-linenumber="5">
-            <span class="hits">18</span>
+          <li class="covered" data-hits="21" data-linenumber="5">
+            <span class="hits">21</span>
             
 
             
@@ -1381,7 +1359,7 @@
 
             
 
-            <code class="ruby">    # @converted_date = date.to_i</code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
@@ -1392,23 +1370,12 @@
 
             
 
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="8">
-            
-            
-
-            
-
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="9">
+          <li class="covered" data-hits="1" data-linenumber="8">
             <span class="hits">1</span>
             
 
@@ -1419,7 +1386,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="135" data-linenumber="10">
+          <li class="covered" data-hits="135" data-linenumber="9">
             <span class="hits">135</span>
             
 
@@ -1430,7 +1397,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="11">
+          <li class="never" data-hits="" data-linenumber="10">
             
             
 
@@ -1441,7 +1408,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="12">
+          <li class="never" data-hits="" data-linenumber="11">
             
             
 
@@ -1452,7 +1419,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="13">
+          <li class="covered" data-hits="1" data-linenumber="12">
             <span class="hits">1</span>
             
 
@@ -1463,7 +1430,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="134" data-linenumber="14">
+          <li class="covered" data-hits="134" data-linenumber="13">
             <span class="hits">134</span>
             
 
@@ -1474,7 +1441,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="15">
+          <li class="never" data-hits="" data-linenumber="14">
             
             
 
@@ -1485,7 +1452,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="16">
+          <li class="never" data-hits="" data-linenumber="15">
             
             
 
@@ -1963,8 +1930,8 @@
     
 
     <div class="t-line-summary">
-      <b>71</b> relevant lines.
-      <span class="green"><b>71</b> lines covered</span> and
+      <b>83</b> relevant lines.
+      <span class="green"><b>83</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -3291,12 +3258,243 @@
 
             
 
-            <code class="ruby">    end</code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
           <li class="never" data-hits="" data-linenumber="121">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="122">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  it &#39;can encrypt enigma with current date&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="123">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    enigma = Enigma.new(&#39;hello world&#39;, &#39;02715&#39;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="124">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="125">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(enigma.date.date).to eq(Date.today.strftime(&#39;%d%m%y&#39;))</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="126">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="127">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="128">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  it &#39;can encrypt enigma with a randomly generated key&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="129">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    enigma = Enigma.new(&#39;hello world&#39;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="130">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="131">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(enigma.key).to be_a Key</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="132">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(enigma.date.date).to eq(Date.today.strftime(&#39;%d%m%y&#39;))</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="133">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="134">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="135">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  it &#39;can encrypt enigma with messages from txt file&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="136">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    enigma = Enigma.new</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="137">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="138">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(enigma.message).to eq(&#39;hello world&#39;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="139">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(enigma.key).to be_a Key</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="140">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(enigma.date.date).to eq(Date.today.strftime(&#39;%d%m%y&#39;))</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="141">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="142">
             
             
 
@@ -3325,8 +3523,8 @@
     
 
     <div class="t-line-summary">
-      <b>24</b> relevant lines.
-      <span class="green"><b>24</b> lines covered</span> and
+      <b>20</b> relevant lines.
+      <span class="green"><b>20</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -3734,24 +3932,24 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="37">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="37">
+            
             
 
             
 
-            <code class="ruby">  it &#39;can generate a random 5-digit key&#39; do</code>
+            <code class="ruby">  # it &#39;can generate a random 5-digit key&#39; do</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="38">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="38">
+            
             
 
             
 
-            <code class="ruby">    key = Key.new(&#39;02715&#39;)</code>
+            <code class="ruby">  #   key = Key.new(&#39;02715&#39;)</code>
           </li>
         </div>
       
@@ -3762,29 +3960,29 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  #</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="40">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="40">
+            
             
 
             
 
-            <code class="ruby">    expect(key.key_generator).to be_a String</code>
+            <code class="ruby">  #   expect(key.key_generator).to be_a String</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="41">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="41">
+            
             
 
             
 
-            <code class="ruby">    expect(key.key_generator.length).to eq(5)</code>
+            <code class="ruby">  #   expect(key.key_generator.length).to eq(5)</code>
           </li>
         </div>
       
@@ -3795,7 +3993,7 @@
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby">  # end</code>
           </li>
         </div>
       
