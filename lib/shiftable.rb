@@ -1,4 +1,4 @@
-module DeEncryptable
+module Shiftable
 
   def start_position(char)
     @character_set.index(char)
