@@ -20,6 +20,7 @@ module Shiftable
     (start_position(char) + @key.fourth_shift(key) + @date.last_4[3]) % @character_set.count
   end
 
+
   def unshift_a(char)
     (start_position(char) - @key.first_shift(key) - @date.last_4[0]) % @character_set.count
   end
