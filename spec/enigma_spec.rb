@@ -20,11 +20,13 @@ RSpec.describe Enigma do
     enigma = Enigma.new('hello world', '02715', '040895')
 
     expect(enigma.key).to be_a Key
+    expect(enigma.key.random_nums).to eq('02715')
   end
   it 'is the current date as a string' do
     enigma = Enigma.new('hello world', '02715', '040895')
 
     expect(enigma.date).to be_a Offset
+    expect(enigma.date.date).to eq('040895')
   end
 
   it 'has a character_set' do
