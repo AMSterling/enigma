@@ -5,7 +5,7 @@ class Enigma
   include Shiftable
   attr_reader :message, :key, :date, :character_set
 
-  def initialize(message = File.open('./lib/message.txt', 'r').read.downcase.chomp,
+  def initialize(message = File.open('lib/message.txt', 'r').read.downcase.chomp,
                   key = rand.to_s[2..6],
                   date = Date.today.strftime('%d%m%y'))
     @message = message
