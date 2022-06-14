@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2022-06-13T20:32:07-06:00">2022-06-13T20:32:07-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2022-06-14T14:36:00-06:00">2022-06-14T14:36:00-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -2378,7 +2378,7 @@
 
             
 
-            <code class="ruby">  it &#39;matches the first character to it index counterpart&#39; do</code>
+            <code class="ruby">  it &#39;checks if punctuation/spaces are not included in character set&#39; do</code>
           </li>
         </div>
       
@@ -2389,7 +2389,7 @@
 
             
 
-            <code class="ruby">    enigma = Enigma.new(&#39;hello world&#39;, &#39;02715&#39;, &#39;040895&#39;)</code>
+            <code class="ruby">    enigma = Enigma.new(&#39;hello world!&#39;, &#39;02715&#39;, &#39;040895&#39;)</code>
           </li>
         </div>
       
@@ -2411,18 +2411,18 @@
 
             
 
-            <code class="ruby">    expect(enigma.start_position(&#39;h&#39;)).to eq(7)</code>
+            <code class="ruby">    expect(enigma.punctuation(&#39; &#39;)).to be false</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="43">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="43">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">  end</code>
+            
+
+            <code class="ruby">    expect(enigma.punctuation(&#39;!&#39;)).to be true</code>
           </li>
         </div>
       
@@ -2433,18 +2433,18 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="45">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="45">
+            
             
 
             
 
-            <code class="ruby">  it &#39;is the A, B, C or D shift&#39; do</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -2455,29 +2455,29 @@
 
             
 
+            <code class="ruby">  it &#39;matches the first character to it index counterpart&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="47">
+            <span class="hits">1</span>
+            
+
+            
+
             <code class="ruby">    enigma = Enigma.new(&#39;hello world&#39;, &#39;02715&#39;, &#39;040895&#39;)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="47">
+          <li class="never" data-hits="" data-linenumber="48">
             
             
 
             
 
             <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="48">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    expect(enigma.shift_a(&#39;h&#39;)).to eq(10)</code>
           </li>
         </div>
       
@@ -2488,111 +2488,12 @@
 
             
 
-            <code class="ruby">    expect(enigma.shift_b(&#39;e&#39;)).to eq(4)</code>
+            <code class="ruby">    expect(enigma.start_position(&#39;h&#39;)).to eq(7)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="50">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    expect(enigma.shift_c(&#39;l&#39;)).to eq(3)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="51">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    expect(enigma.shift_d(&#39;l&#39;)).to eq(4)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="52">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    expect(enigma.shift_a(&#39;o&#39;)).to eq(17)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="53">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    expect(enigma.shift_b(&#39; &#39;)).to eq(26)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="54">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    expect(enigma.shift_c(&#39;w&#39;)).to eq(14)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="55">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    expect(enigma.shift_d(&#39;o&#39;)).to eq(7)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="56">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    expect(enigma.shift_a(&#39;r&#39;)).to eq(20)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="57">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    expect(enigma.shift_b(&#39;l&#39;)).to eq(11)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="58">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    expect(enigma.shift_c(&#39;d&#39;)).to eq(22)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="59">
+          <li class="never" data-hits="" data-linenumber="50">
             
             
 
@@ -2603,13 +2504,112 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="60">
+          <li class="never" data-hits="" data-linenumber="51">
             
             
 
             
 
             <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="52">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  it &#39;is the A, B, C or D shift&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="53">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    enigma = Enigma.new(&#39;hello world&#39;, &#39;02715&#39;, &#39;040895&#39;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="54">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="55">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(enigma.shift_a(&#39;h&#39;)).to eq(10)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="56">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(enigma.shift_b(&#39;e&#39;)).to eq(4)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="57">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(enigma.shift_c(&#39;l&#39;)).to eq(3)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="58">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(enigma.shift_d(&#39;l&#39;)).to eq(4)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="59">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(enigma.shift_a(&#39;o&#39;)).to eq(17)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="60">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(enigma.shift_b(&#39; &#39;)).to eq(26)</code>
           </li>
         </div>
       
@@ -2620,7 +2620,7 @@
 
             
 
-            <code class="ruby">  it &#39;checks if punctuation/spaces are not included in character set&#39; do</code>
+            <code class="ruby">    expect(enigma.shift_c(&#39;w&#39;)).to eq(14)</code>
           </li>
         </div>
       
@@ -2631,18 +2631,18 @@
 
             
 
-            <code class="ruby">    enigma = Enigma.new(&#39;hello world!&#39;, &#39;02715&#39;, &#39;040895&#39;)</code>
+            <code class="ruby">    expect(enigma.shift_d(&#39;o&#39;)).to eq(7)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="63">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="63">
+            <span class="hits">1</span>
             
 
-            <code class="ruby"></code>
+            
+
+            <code class="ruby">    expect(enigma.shift_a(&#39;r&#39;)).to eq(20)</code>
           </li>
         </div>
       
@@ -2653,7 +2653,7 @@
 
             
 
-            <code class="ruby">    expect(enigma.punctuation(&#39; &#39;)).to be false</code>
+            <code class="ruby">    expect(enigma.shift_b(&#39;l&#39;)).to eq(11)</code>
           </li>
         </div>
       
@@ -2664,7 +2664,7 @@
 
             
 
-            <code class="ruby">    expect(enigma.punctuation(&#39;!&#39;)).to be true</code>
+            <code class="ruby">    expect(enigma.shift_c(&#39;d&#39;)).to eq(22)</code>
           </li>
         </div>
       
@@ -3489,7 +3489,7 @@
 
             
 
-            <code class="ruby">    expect(enigma.message).to eq(&#39;hello world&#39;)</code>
+            <code class="ruby">    expect(enigma.message).to eq(&#39;better than black thursday at least&#39;)</code>
           </li>
         </div>
       

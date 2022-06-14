@@ -29,18 +29,25 @@ Create GemFile in top folder
 gem 'simplecov', require: false, group: :test
 source 'https://rubygems.org'
 
-run gem install bundle
+    run gem install bundle
 
-Create spec_helper.rb in spec folder
-require 'simplecov'
-SimpleCov.start
-require_relative 'enigma_spec'
-require_relative 'offset_spec'
-require_relative 'key_spec'
+    Create spec_helper.rb in spec folder
 
-To run SimpleCov in Terminal
-rspec spec/spec_helper.rb
-open coverage/index.html
+    require 'simplecov'
+
+    SimpleCov.start
+
+    require_relative 'enigma_spec'
+
+    require_relative 'offset_spec'
+
+    require_relative 'key_spec'
+
+- To run SimpleCov in Terminal
+
+1. 'rspec spec/spec_helper.rb'
+
+2. 'open coverage/index.html'
 
 ## Running the tests
 
@@ -58,17 +65,17 @@ Tested using rspec and simplecov
 
 Type message to be encrypted/decrypted in message.txt
 
-- To check encryption in Terminal run
+- To check encryption in Terminal run:
 ruby ./lib/encrypt.rb message.txt encrypted.txt
-- Terminal output
+- Terminal output:
 Created 'encrypted.txt' with the key <key> and date <date>
-- Encrypted message contained in encrypted.txt
+- Encrypted message contained in <encrypted.txt>
 
-- To check decryption in Terminal run
+- To check decryption in Terminal run:
 ruby ./lib/decrypt.rb encrypted.txt decrypted.txt <encrypt_key> <encrypt_date>
-- Terminal output
+- Terminal output:
 Created 'decrypted.txt' with the key <key> and date <date>
-- Decrypted message populates in decrypted.txt
+- Decrypted message populates in <decrypted.txt>
 
 ## Acknowledgments
 
