@@ -36,6 +36,13 @@ RSpec.describe Enigma do
     expect(enigma.character_set).to eq(["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", " "])
   end
 
+  it 'checks if punctuation/spaces are not included in character set' do
+    enigma = Enigma.new('hello world!', '02715', '040895')
+
+    expect(enigma.punctuation(' ')).to be false
+    expect(enigma.punctuation('!')).to be true
+  end
+
   it 'matches the first character to it index counterpart' do
     enigma = Enigma.new('hello world', '02715', '040895')
 
@@ -56,13 +63,6 @@ RSpec.describe Enigma do
     expect(enigma.shift_a('r')).to eq(20)
     expect(enigma.shift_b('l')).to eq(11)
     expect(enigma.shift_c('d')).to eq(22)
-  end
-
-  it 'checks if punctuation/spaces are not included in character set' do
-    enigma = Enigma.new('hello world!', '02715', '040895')
-
-    expect(enigma.punctuation(' ')).to be false
-    expect(enigma.punctuation('!')).to be true
   end
 
   it 'applies shift method to each character of the message' do
@@ -137,7 +137,7 @@ RSpec.describe Enigma do
   it 'can encrypt enigma with messages from txt file' do
     enigma = Enigma.new
 
-    expect(enigma.message).to eq('hello world')
+    expect(enigma.message).to eq('better than black thursday at least')
     expect(enigma.key).to be_a Key
     expect(enigma.date.date).to eq(Date.today.strftime('%d%m%y'))
   end
